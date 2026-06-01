@@ -26,7 +26,7 @@ export default function Home() {
             <div
                 className="fixed top-0 left-0 w-full h-full -z-20 bg-cover bg-center"
                 style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070')",
+                    backgroundImage: "url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2029')",
                     backgroundAttachment: isMobile ? "scroll" : "fixed"
                 }}
             />
@@ -64,9 +64,9 @@ export default function Home() {
                             Современный дизайн • Анимации • Адаптив
                         </p>
                         <button className="group relative px-6 md:px-8 py-2 md:py-4 bg-purple-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
-              <span className="relative z-10 text-white font-semibold text-sm md:text-base">
-                Наши работы
-              </span>
+                            <span className="relative z-10 text-white font-semibold text-sm md:text-base">
+                                Наши работы
+                            </span>
                             <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </button>
                     </div>
@@ -120,7 +120,7 @@ export default function Home() {
                         {[
                             {
                                 icon: "🎨",
-                                title: "Дизайн от Лисы",
+                                title: "Дизайн",
                                 desc: "Figma, авто-лейауты, современные тренды, уникальный стиль",
                                 price: "от 15 000 ₽",
                             },
@@ -150,6 +150,34 @@ export default function Home() {
                                 </button>
                             </div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Контакты */}
+                <div className="container mx-auto px-4 py-10 md:py-16">
+                    <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-purple-500/30 text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Свяжитесь с <span className="text-purple-400">Лисой</span>
+                        </h2>
+                        <div className="space-y-4">
+                            <p className="text-white/80 text-lg break-all">
+                                📞 <a href="tel:+79668043676" className="hover:text-purple-400 transition-colors">+7 966 804-36-76</a>
+                            </p>
+                            <p className="text-white/80 text-lg break-all">
+                                ✉️ <a href="mailto:lisa_margo_lisa@mail.ru" className="hover:text-purple-400 transition-colors">lisa_margo_lisa@mail.ru</a>
+                            </p>
+                            <div className="flex justify-center gap-4 pt-4">
+                                <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 hover:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.6-1.38-.97-2.23-1.56-.99-.68-.35-1.06.22-1.67.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.06-.2-.04-.28-.02-.11.02-1.85 1.18-5.23 3.47-.5.34-.94.51-1.34.5-.44-.01-1.28-.25-1.91-.45-.77-.25-1.38-.38-1.33-.81.03-.23.34-.46.95-.7 3.73-1.62 6.22-2.69 7.47-3.21 3.56-1.49 4.3-1.75 4.78-1.76.11 0 .35.03.51.2.13.15.17.35.18.45.01.04-.01.16-.03.25z"/></svg>
+                                </a>
+                                <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 hover:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                    <span className="text-white font-bold text-sm">MAX</span>
+                                </a>
+                            </div>
+                            <p className="text-white/60 text-sm pt-4">
+                                Лиса доступна в Telegram и Max (оба по номеру телефона)
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
