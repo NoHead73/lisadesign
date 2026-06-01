@@ -157,7 +157,7 @@ export default function Home() {
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-purple-500/30 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                            Свяжитесь с <span className="text-purple-400">Лисой</span>
+                            Контакты
                         </h2>
                         <div className="space-y-4">
                             <p className="text-white/80 text-lg break-all">
