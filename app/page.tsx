@@ -22,11 +22,11 @@ export default function Home() {
 
     return (
         <div className="relative min-h-screen overflow-y-auto overflow-x-hidden">
-            {/* Фон */}
+            {/* Космический фон */}
             <div
                 className="fixed top-0 left-0 w-full h-full -z-20 bg-cover bg-center"
                 style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2029')",
+                    backgroundImage: "url('https://images.unsplash.com/photo-1462332420958-a05d1e002413?q=80&w=2107')",
                     backgroundAttachment: isMobile ? "scroll" : "fixed"
                 }}
             />
