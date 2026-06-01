@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useState } from 'react';
 
@@ -16,7 +16,7 @@ export default function Preloader({ children }: { children: React.ReactNode }) {
         <div className="text-center">
           <div className="text-7xl md:text-8xl animate-bounce mb-4">🦊</div>
           <div className="w-20 h-20 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-white text-lg">Loading LisaDesign...</p>
+          <p className="text-white text-lg">Загружаем LisaDesign...</p>
         </div>
       </div>
     );
