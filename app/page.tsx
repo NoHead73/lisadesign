@@ -31,15 +31,15 @@ export default function Home() {
                 }}
             />
 
-            {/* Очень темный фиолетово-черный градиент поверх */}
-            <div className="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-black/80 via-purple-950/70 to-black/80 -z-10" />
+            {/* Темный градиент */}
+            <div className="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-black/90 via-purple-950/60 to-black/90 -z-10" />
 
-            {/* Звездные частицы */}
-            <div className="fixed top-0 left-0 w-full h-full -z-5 opacity-40">
-                {!isMobile && [...Array(50)].map((_, i) => (
+            {/* Звезды */}
+            <div className="fixed top-0 left-0 w-full h-full -z-5 opacity-50">
+                {!isMobile && [...Array(60)].map((_, i) => (
                     <div
                         key={i}
-                        className="absolute rounded-full bg-white/40 animate-pulse"
+                        className="absolute rounded-full bg-white/50 animate-pulse"
                         style={{
                             width: `${Math.random() * 2 + 1}px`,
                             height: `${Math.random() * 2 + 1}px`,
@@ -57,17 +57,17 @@ export default function Home() {
                 {/* Hero секция */}
                 <div className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
                     <div className="text-center">
-                        <h1 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">
+                        <h1 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-pink-400 via-rose-500 to-pink-500 bg-clip-text text-transparent">
                             🦊 LisaDesign
                         </h1>
                         <p className="text-sm md:text-lg text-gray-300 mb-6 md:mb-12">
                             Современный дизайн • Анимации • Адаптив
                         </p>
-                        <button className="group relative px-6 md:px-8 py-2 md:py-4 bg-pink-600/70 hover:bg-pink-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg shadow-pink-500/20">
+                        <button className="group relative px-6 md:px-8 py-2 md:py-4 bg-pink-600/70 hover:bg-pink-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg shadow-pink-500/30">
                             <span className="relative z-10 text-white font-semibold text-sm md:text-base">
                                 Наши работы
                             </span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-rose-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </button>
                     </div>
                 </div>
