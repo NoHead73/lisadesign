@@ -174,9 +174,6 @@ export default function Home() {
                                     <span className="text-white font-bold text-sm">MAX</span>
                                 </a>
                             </div>
-                            <p className="text-white/60 text-sm pt-4">
-                                Лиса доступна в Telegram и Max (оба по номеру телефона)
-                            </p>
                         </div>
                     </div>
                 </div>
