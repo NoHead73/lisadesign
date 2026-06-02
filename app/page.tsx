@@ -34,7 +34,7 @@ export default function Home() {
             {/* Очень тёмный градиент поверх */}
             <div className="fixed top-0 left-0 w-full h-full bg-black/70 -z-10" />
 
-            {/* Звёзды (белые точки) */}
+            {/* Звёзды */}
             <div className="fixed top-0 left-0 w-full h-full -z-5 opacity-60">
                 {[...Array(100)].map((_, i) => (
                     <div
@@ -112,7 +112,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Карточки услуг */}
+                {/* Карточки услуг — ПОЛУПРОЗРАЧНЫЕ И ПО ЦЕНТРУ */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                         {[
@@ -137,13 +137,13 @@ export default function Home() {
                         ].map((card, idx) => (
                             <div
                                 key={idx}
-                                className="bg-black/50 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:scale-105"
+                                className="bg-black/40 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
                             >
                                 <div className="text-4xl md:text-6xl mb-3 md:mb-4">{card.icon}</div>
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2">{card.title}</h3>
-                                <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4">{card.desc}</p>
-                                <p className="text-2xl md:text-3xl font-bold text-pink-400 mb-4 md:mb-6">{card.price}</p>
-                                <button className="w-full py-2 bg-purple-800 hover:bg-purple-700 rounded-lg transition-all duration-300 text-white text-sm md:text-base">
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2 text-center">{card.title}</h3>
+                                <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4 text-center">{card.desc}</p>
+                                <p className="text-2xl md:text-3xl font-bold text-pink-400 mb-4 md:mb-6 text-center">{card.price}</p>
+                                <button className="w-full py-2 bg-purple-800 hover:bg-purple-700 rounded-lg transition-all duration-300 text-white text-sm md:text-base text-center">
                                     Заказать
                                 </button>
                             </div>
