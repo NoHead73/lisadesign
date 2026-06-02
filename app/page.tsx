@@ -70,7 +70,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Преимущества — полностью прозрачные */}
+                {/* Преимущества */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-200 mb-10 md:mb-16">
@@ -79,7 +79,7 @@ export default function Home() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                             {[
                                 {
-                                    icon: "🎨",
+                                    icon: "/exclusive-icon.png",
                                     title: "Эксклюзивный дизайн",
                                     desc: "Профессиональный авторский дизайн, созданный специально для вас"
                                 },
@@ -103,7 +103,11 @@ export default function Home() {
                                     key={idx}
                                     className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
                                 >
-                                    <div className="text-5xl mb-4">{item.icon}</div>
+                                    {item.icon.startsWith("/") ? (
+                                        <img src={item.icon} alt={item.title} className="w-12 h-12 mx-auto mb-4" />
+                                    ) : (
+                                        <div className="text-5xl mb-4">{item.icon}</div>
+                                    )}
                                     <h3 className="text-xl font-bold text-gray-200 mb-3">{item.title}</h3>
                                     <p className="text-gray-400 text-sm">{item.desc}</p>
                                 </div>
