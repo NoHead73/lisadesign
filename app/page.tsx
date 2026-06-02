@@ -154,8 +154,8 @@ export default function Home() {
 
                 {/* Контакты */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
-                    <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 text-center">
-                        <img src="/telephone.png" alt="Телефон" className="w-12 h-12 mx-auto mb-4" />
+                    <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center">
+                        <img src="/telephone.png" alt="Телефон" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-6">
                             Контакты
                         </h2>
