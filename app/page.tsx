@@ -56,12 +56,10 @@ export default function Home() {
                 {/* Hero секция */}
                 <div className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
                     <div className="text-center">
-                        <div className="flex items-center justify-center gap-2 mb-4 md:mb-6">
-                            <img src="/fox.png" alt="LisaDesign" className="w-12 h-12 md:w-16 md:h-16" />
-                            <h1 className="text-4xl md:text-7xl font-bold text-pink-500">
-                                LisaDesign
-                            </h1>
-                        </div>
+                        <img src="/fox.png" alt="LisaDesign" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
+                        <h1 className="text-4xl md:text-7xl font-bold text-pink-500 mb-4 md:mb-6">
+                            LisaDesign
+                        </h1>
                         <p className="text-sm md:text-lg text-gray-300 mb-6 md:mb-12">
                             Современный дизайн • Анимации • Адаптив
                         </p>
@@ -157,16 +155,16 @@ export default function Home() {
                 {/* Контакты */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-6">
-                            Контакты
-                        </h2>
+                        <div className="flex items-center justify-center gap-3 mb-6">
+                            <img src="/telephone.png" alt="Телефон" className="w-8 h-8" />
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-200">
+                                Контакты
+                            </h2>
+                        </div>
                         <div className="space-y-4">
-                            <div className="flex items-center justify-center gap-3">
-                                <img src="/telephone.png" alt="Телефон" className="w-6 h-6" />
-                                <p className="text-gray-300 text-lg break-all">
-                                    <a href="tel:+79668043676" className="hover:text-pink-400 transition-colors">+7 966 804-36-76</a>
-                                </p>
-                            </div>
+                            <p className="text-gray-300 text-lg break-all">
+                                📞 <a href="tel:+79668043676" className="hover:text-pink-400 transition-colors">+7 966 804-36-76</a>
+                            </p>
                             <p className="text-gray-300 text-lg break-all">
                                 ✉️ <a href="mailto:lisa_margo_lisa@mail.ru" className="hover:text-pink-400 transition-colors">lisa_margo_lisa@mail.ru</a>
                             </p>
