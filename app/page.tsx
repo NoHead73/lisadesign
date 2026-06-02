@@ -70,7 +70,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Преимущества — прозрачные */}
+                {/* Преимущества — полностью прозрачные */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-200 mb-10 md:mb-16">
@@ -101,7 +101,7 @@ export default function Home() {
                             ].map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
+                                    className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
                                 >
                                     <div className="text-5xl mb-4">{item.icon}</div>
                                     <h3 className="text-xl font-bold text-gray-200 mb-3">{item.title}</h3>
@@ -112,7 +112,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Карточки услуг — максимально прозрачные */}
+                {/* Карточки услуг — полностью прозрачные */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                         {[
@@ -137,7 +137,7 @@ export default function Home() {
                         ].map((card, idx) => (
                             <div
                                 key={idx}
-                                className="bg-white/5 rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
+                                className="rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
                             >
                                 <div className="text-4xl md:text-6xl mb-3 md:mb-4">{card.icon}</div>
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2 text-center">{card.title}</h3>
@@ -151,9 +151,9 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Контакты */}
+                {/* Контакты — полностью прозрачный, как и другие карточки */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
-                    <div className="max-w-2xl mx-auto bg-black/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 text-center">
+                    <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-6">
                             Контакты
                         </h2>
