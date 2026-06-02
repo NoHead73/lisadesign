@@ -102,11 +102,11 @@ export default function Home() {
                             ].map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
+                                    className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center flex flex-col h-full"
                                 >
                                     <img src={item.icon} alt={item.title} className="w-12 h-12 mx-auto mb-4" />
                                     <h3 className="text-xl font-bold text-gray-200 mb-3">{item.title}</h3>
-                                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                                    <p className="text-gray-400 text-sm flex-grow flex items-center justify-center">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -138,13 +138,13 @@ export default function Home() {
                         ].map((card, idx) => (
                             <div
                                 key={idx}
-                                className="rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
+                                className="rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center flex flex-col h-full"
                             >
                                 <img src={card.icon} alt={card.title} className="w-12 h-12 mx-auto mb-3 md:mb-4" />
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2 text-center">{card.title}</h3>
-                                <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4 text-center">{card.desc}</p>
-                                <p className="text-2xl md:text-3xl font-bold text-pink-400 mb-4 md:mb-6 text-center">{card.price}</p>
-                                <button className="w-full py-2 bg-purple-800 hover:bg-purple-700 rounded-lg transition-all duration-300 text-white text-sm md:text-base text-center">
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2">{card.title}</h3>
+                                <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4">{card.desc}</p>
+                                <p className="text-2xl md:text-3xl font-bold text-pink-400 mb-4 md:mb-6">{card.price}</p>
+                                <button className="w-full py-2 bg-purple-800 hover:bg-purple-700 rounded-lg transition-all duration-300 text-white text-sm md:text-base">
                                     Заказать
                                 </button>
                             </div>
@@ -155,12 +155,10 @@ export default function Home() {
                 {/* Контакты */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 text-center">
-                        <div className="flex items-center justify-center gap-3 mb-6">
-                            <img src="/telephone.png" alt="Телефон" className="w-8 h-8" />
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-200">
-                                Контакты
-                            </h2>
-                        </div>
+                        <img src="/telephone.png" alt="Телефон" className="w-12 h-12 mx-auto mb-4" />
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-6">
+                            Контакты
+                        </h2>
                         <div className="space-y-4">
                             <p className="text-gray-300 text-lg break-all">
                                 📞 <a href="tel:+79668043676" className="hover:text-pink-400 transition-colors">+7 966 804-36-76</a>
