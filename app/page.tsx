@@ -56,9 +56,12 @@ export default function Home() {
                 {/* Hero секция */}
                 <div className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
                     <div className="text-center">
-                        <h1 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6 text-pink-500">
-                            🦊 LisaDesign
-                        </h1>
+                        <div className="flex items-center justify-center gap-2 mb-4 md:mb-6">
+                            <img src="/fox.png" alt="LisaDesign" className="w-12 h-12 md:w-16 md:h-16" />
+                            <h1 className="text-4xl md:text-7xl font-bold text-pink-500">
+                                LisaDesign
+                            </h1>
+                        </div>
                         <p className="text-sm md:text-lg text-gray-300 mb-6 md:mb-12">
                             Современный дизайн • Анимации • Адаптив
                         </p>
@@ -70,7 +73,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Преимущества — полностью прозрачные */}
+                {/* Преимущества */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-200 mb-10 md:mb-16">
@@ -79,22 +82,22 @@ export default function Home() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                             {[
                                 {
-                                    icon: "🎨",
+                                    icon: "/diamond.png",
                                     title: "Эксклюзивный дизайн",
-                                    desc: "Профессиональный авторский дизайн, созданный специально для вас"
+                                    desc: "Профессиональный авторский дизайн. Изображения нарисованные вручную по вашему заказу"
                                 },
                                 {
-                                    icon: "💻",
+                                    icon: "/development.png",
                                     title: "Ручная разработка",
                                     desc: "Профессиональная ручная разработка без использования шаблонов"
                                 },
                                 {
-                                    icon: "✨",
+                                    icon: "/world-wide-web.png",
                                     title: "Эксклюзивные названия",
                                     desc: "Уникальные нейминг и названия, которые выделят ваш бизнес"
                                 },
                                 {
-                                    icon: "🔄",
+                                    icon: "/24h.png",
                                     title: "Гибкое сопровождение",
                                     desc: "Гибкая система сопровождения сайтов и постоянная поддержка"
                                 }
@@ -103,7 +106,7 @@ export default function Home() {
                                     key={idx}
                                     className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
                                 >
-                                    <div className="text-5xl mb-4">{item.icon}</div>
+                                    <img src={item.icon} alt={item.title} className="w-12 h-12 mx-auto mb-4" />
                                     <h3 className="text-xl font-bold text-gray-200 mb-3">{item.title}</h3>
                                     <p className="text-gray-400 text-sm">{item.desc}</p>
                                 </div>
@@ -112,24 +115,24 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Карточки услуг — полностью прозрачные */}
+                {/* Карточки услуг */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                         {[
                             {
-                                icon: "🎨",
+                                icon: "/layers.png",
                                 title: "Дизайн",
                                 desc: "Figma, авто-лейауты, современные тренды, уникальный стиль",
                                 price: "от 15 000 ₽",
                             },
                             {
-                                icon: "⚡",
+                                icon: "/web-development.png",
                                 title: "Разработка",
                                 desc: "Next.js, TypeScript, Tailwind, анимации, производительность",
                                 price: "от 25 000 ₽",
                             },
                             {
-                                icon: "🚀",
+                                icon: "/problem-solving.png",
                                 title: "Комбо",
                                 desc: "Дизайн + Разработка. Сайт под ключ с видео и анимациями",
                                 price: "от 35 000 ₽",
@@ -139,7 +142,7 @@ export default function Home() {
                                 key={idx}
                                 className="rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center"
                             >
-                                <div className="text-4xl md:text-6xl mb-3 md:mb-4">{card.icon}</div>
+                                <img src={card.icon} alt={card.title} className="w-12 h-12 mx-auto mb-3 md:mb-4" />
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2 text-center">{card.title}</h3>
                                 <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4 text-center">{card.desc}</p>
                                 <p className="text-2xl md:text-3xl font-bold text-pink-400 mb-4 md:mb-6 text-center">{card.price}</p>
@@ -151,16 +154,19 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Контакты — полностью прозрачный, как и другие карточки */}
+                {/* Контакты */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-6">
                             Контакты
                         </h2>
                         <div className="space-y-4">
-                            <p className="text-gray-300 text-lg break-all">
-                                📞 <a href="tel:+79668043676" className="hover:text-pink-400 transition-colors">+7 966 804-36-76</a>
-                            </p>
+                            <div className="flex items-center justify-center gap-3">
+                                <img src="/telephone.png" alt="Телефон" className="w-6 h-6" />
+                                <p className="text-gray-300 text-lg break-all">
+                                    <a href="tel:+79668043676" className="hover:text-pink-400 transition-colors">+7 966 804-36-76</a>
+                                </p>
+                            </div>
                             <p className="text-gray-300 text-lg break-all">
                                 ✉️ <a href="mailto:lisa_margo_lisa@mail.ru" className="hover:text-pink-400 transition-colors">lisa_margo_lisa@mail.ru</a>
                             </p>
