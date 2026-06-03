@@ -63,7 +63,7 @@ export default function Home() {
                         <p className="text-sm md:text-lg text-gray-300 mb-6 md:mb-12">
                             Современный дизайн • Анимации • Адаптив
                         </p>
-                        <button className="px-6 md:px-8 py-2 md:py-4 bg-purple-800 hover:bg-purple-700 rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
+                        <button className="px-6 md:px-8 py-2 md:py-4 bg-purple-800 hover:bg-purple-700 active:bg-purple-600 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">
                             <span className="text-white font-semibold text-sm md:text-base">
                                 Наши работы
                             </span>
@@ -102,7 +102,7 @@ export default function Home() {
                             ].map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center flex flex-col h-full"
+                                    className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center flex flex-col h-full"
                                 >
                                     <img src={item.icon} alt={item.title} className="w-12 h-12 mx-auto mb-4" />
                                     <h3 className="text-xl font-bold text-gray-200 mb-3">{item.title}</h3>
@@ -138,13 +138,13 @@ export default function Home() {
                         ].map((card, idx) => (
                             <div
                                 key={idx}
-                                className="rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center flex flex-col h-full"
+                                className="rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center flex flex-col h-full"
                             >
                                 <img src={card.icon} alt={card.title} className="w-12 h-12 mx-auto mb-3 md:mb-4" />
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2">{card.title}</h3>
                                 <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4">{card.desc}</p>
                                 <p className="text-2xl md:text-3xl font-bold text-pink-400 mb-4 md:mb-6">{card.price}</p>
-                                <button className="w-full py-2 bg-purple-800 hover:bg-purple-700 rounded-lg transition-all duration-300 text-white text-sm md:text-base">
+                                <button className="w-full py-2 bg-purple-800 hover:bg-purple-700 active:bg-purple-600 rounded-lg transition-all duration-300 text-white text-sm md:text-base">
                                     Заказать
                                 </button>
                             </div>
@@ -154,23 +154,23 @@ export default function Home() {
 
                 {/* Контакты */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
-                    <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105 text-center">
+                    <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center">
                         <img src="/telephone.png" alt="Телефон" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-6">
                             Контакты
                         </h2>
                         <div className="space-y-4">
                             <p className="text-gray-300 text-lg break-all">
-                                📞 <a href="tel:+79668043676" className="hover:text-pink-400 transition-colors">+7 966 804-36-76</a>
+                                📞 <a href="tel:+79668043676" className="hover:text-pink-400 active:text-pink-300 transition-colors">+7 966 804-36-76</a>
                             </p>
                             <p className="text-gray-300 text-lg break-all">
-                                ✉️ <a href="mailto:lisa_margo_lisa@mail.ru" className="hover:text-pink-400 transition-colors">lisa_margo_lisa@mail.ru</a>
+                                ✉️ <a href="mailto:lisa_margo_lisa@mail.ru" className="hover:text-pink-400 active:text-pink-300 transition-colors">lisa_margo_lisa@mail.ru</a>
                             </p>
                             <div className="flex justify-center gap-4 pt-4">
-                                <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 active:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95">
                                     <svg className="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.6-1.38-.97-2.23-1.56-.99-.68-.35-1.06.22-1.67.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.06-.2-.04-.28-.02-.11.02-1.85 1.18-5.23 3.47-.5.34-.94.51-1.34.5-.44-.01-1.28-.25-1.91-.45-.77-.25-1.38-.38-1.33-.81.03-.23.34-.46.95-.7 3.73-1.62 6.22-2.69 7.47-3.21 3.56-1.49 4.3-1.75 4.78-1.76.11 0 .35.03.51.2.13.15.17.35.18.45.01.04-.01.16-.03.25z"/></svg>
                                 </a>
-                                <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 active:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95">
                                     <span className="text-gray-300 font-bold text-sm">MAX</span>
                                 </a>
                             </div>
