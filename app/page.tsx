@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Home() {
     const [scrollY, setScrollY] = useState(0);
@@ -15,13 +13,6 @@ export default function Home() {
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
         checkMobile();
         window.addEventListener("resize", checkMobile);
-
-        // Инициализация AOS
-        AOS.init({
-            duration: 800,          // длительность анимации
-            once: true,             // анимация один раз
-            offset: 100,            // срабатывает за 100px до появления
-        });
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -183,7 +174,7 @@ export default function Home() {
                                 <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 active:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95">
                                     <svg className="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.6-1.38-.97-2.23-1.56-.99-.68-.35-1.06.22-1.67.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.06-.2-.04-.28-.02-.11.02-1.85 1.18-5.23 3.47-.5.34-.94.51-1.34.5-.44-.01-1.28-.25-1.91-.45-.77-.25-1.38-.38-1.33-.81.03-.23.34-.46.95-.7 3.73-1.62 6.22-2.69 7.47-3.21 3.56-1.49 4.3-1.75 4.78-1.76.11 0 .35.03.51.2.13.15.17.35.18.45.01.04-.01.16-.03.25z"/></svg>
                                 </a>
-                                <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 active:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95">
+                                <a href="https://max.ru/u/f9LHodD0cOKhGlwTvaOZ5fBUU96wCvZ7-NAgRGAeD9HSBPUFhC4fVEi4qko" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 active:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95">
                                     <span className="text-gray-300 font-bold text-sm">MAX</span>
                                 </a>
                             </div>
