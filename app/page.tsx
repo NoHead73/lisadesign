@@ -1,6 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
     const [scrollY, setScrollY] = useState(0);
@@ -14,6 +16,13 @@ export default function Home() {
         checkMobile();
         window.addEventListener("resize", checkMobile);
 
+        // Инициализация AOS
+        AOS.init({
+            duration: 800,          // длительность анимации
+            once: true,             // анимация один раз
+            offset: 100,            // срабатывает за 100px до появления
+        });
+
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("resize", checkMobile);
@@ -22,6 +31,7 @@ export default function Home() {
 
     return (
         <div className="relative min-h-screen overflow-y-auto overflow-x-hidden">
+            {/* Тёмный космос — фон */}
             <div
                 className="fixed top-0 left-0 w-full h-full -z-20 bg-cover bg-center"
                 style={{
@@ -30,25 +40,29 @@ export default function Home() {
                 }}
             />
 
+            {/* Очень тёмный градиент поверх */}
             <div className="fixed top-0 left-0 w-full h-full bg-black/70 -z-10" />
 
+            {/* Звёзды */}
             <div className="fixed top-0 left-0 w-full h-full -z-5 opacity-60">
                 {[...Array(100)].map((_, i) => (
                     <div
                         key={i}
                         className="absolute rounded-full bg-white"
                         style={{
-                            width: ${Math.random() * 2 + 0.5}px,
-                            height: ${Math.random() * 2 + 0.5}px,
-                            top: ${Math.random() * 100}%,
-                            left: ${Math.random() * 100}%,
+                            width: `${Math.random() * 2 + 0.5}px`,
+                            height: `${Math.random() * 2 + 0.5}px`,
+                            top: `${Math.random() * 100}%`,
+                            left: `${Math.random() * 100}%`,
                             opacity: Math.random() * 0.7 + 0.3,
                         }}
                     />
                 ))}
             </div>
 
+            {/* Контент */}
             <div className="relative z-10 pb-20">
+                {/* Hero секция */}
                 <div className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
                     <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
                         <img src="/fox.png" alt="LisaDesign" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
@@ -66,6 +80,7 @@ export default function Home() {
                     </div>
                 </div>
 
+                {/* Преимущества */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-200 mb-10 md:mb-16" data-aos="fade-up">
@@ -109,6 +124,7 @@ export default function Home() {
                     </div>
                 </div>
 
+                {/* Карточки услуг */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                         {[
@@ -149,6 +165,7 @@ export default function Home() {
                     </div>
                 </div>
 
+                {/* Контакты */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center" data-aos="fade-up" data-aos-delay="200">
                         <img src="/telephone.png" alt="Телефон" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
@@ -166,7 +183,7 @@ export default function Home() {
                                 <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 active:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95">
                                     <svg className="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.6-1.38-.97-2.23-1.56-.99-.68-.35-1.06.22-1.67.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.06-.2-.04-.28-.02-.11.02-1.85 1.18-5.23 3.47-.5.34-.94.51-1.34.5-.44-.01-1.28-.25-1.91-.45-.77-.25-1.38-.38-1.33-.81.03-.23.34-.46.95-.7 3.73-1.62 6.22-2.69 7.47-3.21 3.56-1.49 4.3-1.75 4.78-1.76.11 0 .35.03.51.2.13.15.17.35.18.45.01.04-.01.16-.03.25z"/></svg>
                                 </a>
-                                <a href="https://max.ru/u/f9LHodD0cOKhGlwTvaOZ5fBUU96wCvZ7-NAgRGAeD9HSBPUFhC4fVEi4qko" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 active:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95">
+                                <a href="https://t.me/+79668043676" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 hover:bg-purple-700 active:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95">
                                     <span className="text-gray-300 font-bold text-sm">MAX</span>
                                 </a>
                             </div>
