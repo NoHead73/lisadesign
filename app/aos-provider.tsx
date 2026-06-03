@@ -9,7 +9,7 @@ export default function AOSProvider({ children }: { children: React.ReactNode })
     import('aos').then((AOS) => {
       const AOSModule = AOS.default || AOS;
       AOSModule.init({
-        duration: 800,
+        duration: 1200,
         once: false,
         offset: 100,
       });
