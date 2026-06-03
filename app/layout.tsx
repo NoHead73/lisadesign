@@ -25,9 +25,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const bodyClassName = geistSans.variable + ' ' + geistMono.variable + ' antialiased';
+
   return (
     <html lang='ru'>
-      <body className={${geistSans.variable}  antialiased}>
+      <body className={bodyClassName}>
         <Preloader>
           <AOSProvider>
             {children}
