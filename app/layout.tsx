@@ -25,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body
-        className={${geistSans.variable}  antialiased}
-      >
+      <body className={\ \ antialiased}>
         <Preloader>
           {children}
         </Preloader>
