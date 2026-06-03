@@ -10,7 +10,7 @@ export default function AOSProvider({ children }: { children: React.ReactNode })
       const AOSModule = AOS.default || AOS;
       AOSModule.init({
         duration: 800,
-        once: true,
+        once: false,
         offset: 100,
       });
     });
