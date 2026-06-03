@@ -41,7 +41,7 @@ export default function Home() {
                         <img src="/fox.png" alt="LisaDesign" className="w-20 h-20 md:w-28 md:h-28 mx-auto mb-4" />
                         <h1 className="text-4xl md:text-7xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent mb-4 md:mb-6">LisaDesign</h1>
                         <p className="text-sm md:text-lg text-gray-300 mb-6 md:mb-12">Современный дизайн • Анимации • Адаптив</p>
-                        <button className="px-6 md:px-8 py-2 md:py-4 bg-purple-800 hover:bg-purple-700 active:bg-purple-600 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"><span className="text-white font-semibold text-sm md:text-base">Наши работы</span></button>
+                        <button className="px-6 md:px-8 py-2 md:py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 active:from-pink-700 active:to-purple-800 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"><span className="text-white font-semibold text-sm md:text-base">Наши работы</span></button>
                     </div>
                 </div>
 
