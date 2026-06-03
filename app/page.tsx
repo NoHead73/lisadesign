@@ -39,7 +39,7 @@ export default function Home() {
                 <div className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
                     <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
                         <img src="/fox.png" alt="LisaDesign" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
-                        <h1 className="text-4xl md:text-7xl font-bold text-pink-500 mb-4 md:mb-6">LisaDesign</h1>
+                        <h1 className="text-4xl md:text-7xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent mb-4 md:mb-6">LisaDesign</h1>
                         <p className="text-sm md:text-lg text-gray-300 mb-6 md:mb-12">Современный дизайн • Анимации • Адаптив</p>
                         <button className="px-6 md:px-8 py-2 md:py-4 bg-purple-800 hover:bg-purple-700 active:bg-purple-600 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"><span className="text-white font-semibold text-sm md:text-base">Наши работы</span></button>
                     </div>
@@ -62,9 +62,18 @@ export default function Home() {
 
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
-                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up"><div className="text-4xl md:text-5xl font-bold text-pink-400">15 лет</div><p className="text-gray-400 mt-2">опыта</p></div>
-                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100"><div className="text-4xl md:text-5xl font-bold text-pink-400">1000+</div><p className="text-gray-400 mt-2">проектов</p></div>
-                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200"><div className="text-4xl md:text-5xl font-bold text-pink-400">700+</div><p className="text-gray-400 mt-2">клиентов</p></div>
+                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up">
+                            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">15 лет</div>
+                            <p className="text-gray-400 mt-2">опыта</p>
+                        </div>
+                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">1000+</div>
+                            <p className="text-gray-400 mt-2">проектов</p>
+                        </div>
+                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">700+</div>
+                            <p className="text-gray-400 mt-2">клиентов</p>
+                        </div>
                     </div>
                 </div>
 
