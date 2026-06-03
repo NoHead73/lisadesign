@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 
@@ -31,27 +31,24 @@ export default function Home() {
                 }}
             />
 
-            {/* Очень тёмный градиент поверх */}
             <div className="fixed top-0 left-0 w-full h-full bg-black/70 -z-10" />
 
-            {/* Звёзды */}
             <div className="fixed top-0 left-0 w-full h-full -z-5 opacity-60">
                 {[...Array(100)].map((_, i) => (
                     <div
                         key={i}
                         className="absolute rounded-full bg-white"
                         style={{
-                            width: `${Math.random() * 2 + 0.5}px`,
-                            height: `${Math.random() * 2 + 0.5}px`,
-                            top: `${Math.random() * 100}%`,
-                            left: `${Math.random() * 100}%`,
+                            width: ${Math.random() * 2 + 0.5}px,
+                            height: ${Math.random() * 2 + 0.5}px,
+                            top: ${Math.random() * 100}%,
+                            left: ${Math.random() * 100}%,
                             opacity: Math.random() * 0.7 + 0.3,
                         }}
                     />
                 ))}
             </div>
 
-            {/* Контент */}
             <div className="relative z-10 pb-20">
                 {/* Hero секция */}
                 <div className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
@@ -111,6 +108,24 @@ export default function Home() {
                                     <p className="text-gray-400 text-sm flex-grow flex items-center justify-center">{item.desc}</p>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Счетчики */}
+                <div className="container mx-auto px-4 py-10 md:py-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
+                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up">
+                            <div className="text-4xl md:text-5xl font-bold text-pink-400">15 лет</div>
+                            <p className="text-gray-400 mt-2">опыта</p>
+                        </div>
+                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                            <div className="text-4xl md:text-5xl font-bold text-pink-400">1000+</div>
+                            <p className="text-gray-400 mt-2">проектов</p>
+                        </div>
+                        <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                            <div className="text-4xl md:text-5xl font-bold text-pink-400">700+</div>
+                            <p className="text-gray-400 mt-2">клиентов</p>
                         </div>
                     </div>
                 </div>
