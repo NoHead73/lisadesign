@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
     const [scrollY, setScrollY] = useState(0);
@@ -13,6 +15,13 @@ export default function Home() {
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
         checkMobile();
         window.addEventListener("resize", checkMobile);
+
+        // Инициализация AOS
+        AOS.init({
+            duration: 800,          // длительность анимации
+            once: true,             // анимация один раз
+            offset: 100,            // срабатывает за 100px до появления
+        });
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -55,7 +64,7 @@ export default function Home() {
             <div className="relative z-10 pb-20">
                 {/* Hero секция */}
                 <div className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
-                    <div className="text-center">
+                    <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
                         <img src="/fox.png" alt="LisaDesign" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
                         <h1 className="text-4xl md:text-7xl font-bold text-pink-500 mb-4 md:mb-6">
                             LisaDesign
@@ -74,7 +83,7 @@ export default function Home() {
                 {/* Преимущества */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-200 mb-10 md:mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-200 mb-10 md:mb-16" data-aos="fade-up">
                             Наши <span className="text-pink-400">преимущества</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -103,6 +112,8 @@ export default function Home() {
                                 <div
                                     key={idx}
                                     className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center flex flex-col h-full"
+                                    data-aos="fade-up"
+                                    data-aos-delay={idx * 100}
                                 >
                                     <img src={item.icon} alt={item.title} className="w-12 h-12 mx-auto mb-4" />
                                     <h3 className="text-xl font-bold text-gray-200 mb-3">{item.title}</h3>
@@ -139,6 +150,8 @@ export default function Home() {
                             <div
                                 key={idx}
                                 className="rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center flex flex-col h-full"
+                                data-aos="fade-up"
+                                data-aos-delay={idx * 150}
                             >
                                 <img src={card.icon} alt={card.title} className="w-12 h-12 mx-auto mb-3 md:mb-4" />
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2">{card.title}</h3>
@@ -154,7 +167,7 @@ export default function Home() {
 
                 {/* Контакты */}
                 <div className="container mx-auto px-4 py-10 md:py-16">
-                    <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center">
+                    <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center" data-aos="fade-up" data-aos-delay="200">
                         <img src="/telephone.png" alt="Телефон" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-6">
                             Контакты
