@@ -84,7 +84,7 @@ export default function Home() {
                                 <img src={card.icon} alt={card.title} className="w-12 h-12 mx-auto mb-3 md:mb-4" />
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2">{card.title}</h3>
                                 <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4">{card.desc}</p>
-                                <p className="text-2xl md:text-3xl font-bold text-pink-400 mb-4 md:mb-6">{card.price}</p>
+                                <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent mb-4 md:mb-6">{card.price}</p>
                                 <button className="w-full py-2 bg-purple-800 hover:bg-purple-700 active:bg-purple-600 rounded-lg transition-all duration-300 text-white text-sm md:text-base">Заказать</button>
                             </div>
                         ))}
