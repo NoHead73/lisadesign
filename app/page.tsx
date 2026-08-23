@@ -22,6 +22,13 @@ export default function Home() {
         };
     }, []);
 
+    const scrollToFooter = () => {
+        const footer = document.getElementById('footer');
+        if (footer) {
+            footer.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="relative min-h-screen overflow-y-auto overflow-x-hidden">
             <Header />
@@ -89,7 +96,12 @@ export default function Home() {
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-200 mb-2">{card.title}</h3>
                                 <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4">{card.desc}</p>
                                 <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent mb-4 md:mb-6">{card.price}</p>
-                                <button className="w-full py-2 bg-purple-800 hover:bg-purple-700 active:bg-purple-600 rounded-lg transition-all duration-300 text-white text-sm md:text-base">Заказать</button>
+                                <button
+                                    onClick={scrollToFooter}
+                                    className="w-full py-2 bg-purple-800 hover:bg-purple-700 active:bg-purple-600 rounded-lg transition-all duration-300 text-white text-sm md:text-base"
+                                >
+                                    Заказать
+                                </button>
                             </div>
                         ))}
                     </div>
