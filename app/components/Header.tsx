@@ -32,7 +32,7 @@ export default function Header() {
                             LisaDesign
                         </span>
                     </div>
-                    <span className="text-gray-400 text-xs md:text-sm mt-0.5 ml-10 md:ml-12 hidden md:block">
+                    <span className="text-gray-400 text-[10px] md:text-sm mt-0.5 ml-10 md:ml-12 block">
                         Дизайн, который вдохновляет
                     </span>
                 </div>
