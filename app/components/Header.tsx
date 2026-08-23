@@ -23,7 +23,7 @@ export default function Header() {
     };
 
     return (
-        <header className={ixed top-0 left-0 w-full z-50 transition-all duration-300 }>
+        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}>
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
                     <img src="/fox.png" alt="LisaDesign" className="w-8 h-8 md:w-10 md:h-10" />
