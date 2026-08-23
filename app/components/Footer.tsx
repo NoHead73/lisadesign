@@ -15,15 +15,15 @@ export default function Footer() {
 
                     <div className="text-center">
                         <h3 className="text-pink-400 font-semibold text-sm mb-1">Контакты</h3>
-                        <p className="text-gray-400 text-xs">📞 <a href="tel:+79668043676" className="hover:text-pink-400 transition">+7 966 804-36-76</a></p>
-                        <p className="text-gray-400 text-xs">✉️ <a href="mailto:lisa_margo_lisa@mail.ru" className="hover:text-pink-400 transition">lisa_margo_lisa@mail.ru</a></p>
+                        <p className="text-gray-400 text-sm">📞 <a href="tel:+79668043676" className="hover:text-pink-400 transition">+7 966 804-36-76</a></p>
+                        <p className="text-gray-400 text-sm">✉️ <a href="mailto:lisa_margo_lisa@mail.ru" className="hover:text-pink-400 transition">lisa_margo_lisa@mail.ru</a></p>
                     </div>
 
                     <div className="text-center md:text-right">
                         <h3 className="text-pink-400 font-semibold text-sm mb-1">Мы в соцсетях</h3>
                         <div className="flex justify-center md:justify-end gap-4">
-                            <a href="https://t.me/+79668043676" target="_blank" className="text-gray-400 hover:text-pink-400 transition text-xs">Telegram</a>
-                            <a href="https://max.ru/u/f9LHodD0cOKhGlwTvaOZ5fBUU96wCvZ7-NAgRGAeD9HSBPUFhC4fVEi4qko" target="_blank" className="text-gray-400 hover:text-pink-400 transition text-xs">MAX</a>
+                            <a href="https://t.me/+79668043676" target="_blank" className="text-gray-400 hover:text-pink-400 transition text-sm">Telegram</a>
+                            <a href="https://max.ru/u/f9LHodD0cOKhGlwTvaOZ5fBUU96wCvZ7-NAgRGAeD9HSBPUFhC4fVEi4qko" target="_blank" className="text-gray-400 hover:text-pink-400 transition text-sm">MAX</a>
                         </div>
                     </div>
                 </div>

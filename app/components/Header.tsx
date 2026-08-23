@@ -27,8 +27,12 @@ export default function Header() {
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
                     <img src="/fox.png" alt="LisaDesign" className="w-8 h-8 md:w-10 md:h-10" />
-                    <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">LisaDesign</span>
-                    <span className="text-sm md:text-base text-gray-300 ml-2 hidden md:inline">Дизайн, который вдохновляет!</span>
+                    <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+                        LisaDesign
+                    </span>
+                    <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent ml-1 hidden md:inline">
+                        Дизайн, который вдохновляет!
+                    </span>
                 </div>
 
                 <nav className="hidden md:flex items-center gap-8 text-gray-300">
