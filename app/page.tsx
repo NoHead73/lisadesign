@@ -1,6 +1,8 @@
 ﻿"use client";
 
 import { useEffect, useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
     const [scrollY, setScrollY] = useState(0);
@@ -22,6 +24,8 @@ export default function Home() {
 
     return (
         <div className="relative min-h-screen overflow-y-auto overflow-x-hidden">
+            <Header />
+
             <div className="fixed top-0 left-0 w-full h-full -z-20 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2')", backgroundAttachment: isMobile ? "scroll" : "fixed" }} />
             <div className="fixed top-0 left-0 w-full h-full bg-black/70 -z-10" />
             <div className="fixed top-0 left-0 w-full h-full -z-5 opacity-60">
@@ -35,17 +39,17 @@ export default function Home() {
                 })}
             </div>
 
-            <div className="relative z-10 pb-20">
-                <div className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
+            <div className="relative z-10 pb-20 pt-16">
+                <section id="hero" className="min-h-[80vh] flex items-center justify-center px-4 pt-10">
                     <div className="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
                         <img src="/fox.png" alt="LisaDesign" className="w-20 h-20 md:w-28 md:h-28 mx-auto mb-4" />
                         <h1 className="text-4xl md:text-7xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent mb-4 md:mb-6">LisaDesign</h1>
                         <p className="text-sm md:text-lg text-gray-300 mb-6 md:mb-12">Современный дизайн • Анимации • Адаптив</p>
                         <button className="px-6 md:px-8 py-2 md:py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 active:from-pink-700 active:to-purple-800 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"><span className="text-white font-semibold text-sm md:text-base">Наши работы</span></button>
                     </div>
-                </div>
+                </section>
 
-                <div className="container mx-auto px-4 py-10 md:py-16">
+                <section id="advantages" className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16 bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent" data-aos="fade-up" data-aos-once="false">Наши преимущества</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -58,9 +62,9 @@ export default function Home() {
                             ))}
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="container mx-auto px-4 py-10 md:py-16">
+                <section className="container mx-auto px-4 py-10 md:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
                         <div className="rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-once="false">
                             <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">15 лет</div>
@@ -75,9 +79,9 @@ export default function Home() {
                             <p className="text-gray-400 mt-2">клиентов</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="container mx-auto px-4 py-10 md:py-16">
+                <section id="services" className="container mx-auto px-4 py-10 md:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                         {[{ icon: "/layers.png", title: "Дизайн", desc: "Figma, авто-лейауты, современные тренды, уникальный стиль", price: "от 15 000 ₽" }, { icon: "/web-development.png", title: "Разработка", desc: "Next.js, TypeScript, Tailwind, анимации, производительность", price: "от 25 000 ₽" }, { icon: "/problem-solving.png", title: "Комбо", desc: "Дизайн + Разработка. Сайт под ключ с видео и анимациями", price: "от 35 000 ₽" }].map((card, idx) => (
                             <div key={idx} className="rounded-2xl p-4 md:p-6 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center flex flex-col h-full" data-aos="fade-up" data-aos-delay={idx * 150} data-aos-once="false">
@@ -89,9 +93,9 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                <div className="container mx-auto px-4 py-10 md:py-16">
+                <section id="contacts" className="container mx-auto px-4 py-10 md:py-16">
                     <div className="max-w-2xl mx-auto rounded-2xl p-6 md:p-8 border border-white/10 hover:border-purple-500 active:border-purple-500 transition-all duration-300 hover:scale-105 active:scale-95 text-center" data-aos="fade-up" data-aos-delay="200" data-aos-once="false">
                         <img src="/telephone.png" alt="Телефон" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-6">Контакты</h2>
@@ -108,8 +112,10 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
+
+            <Footer />
         </div>
     );
 }
